@@ -24,4 +24,7 @@ hs_err_pid*
 .idea
 *.iml
 
+chapter_001/src/main/java/ru/job4j/Calculate.java
+chapter_001/src/test/java/ru/job4j/CalculateTest.java
+
 target
