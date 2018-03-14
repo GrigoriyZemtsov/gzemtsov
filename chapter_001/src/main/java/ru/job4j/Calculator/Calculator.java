@@ -7,6 +7,7 @@ package ru.job4j.calculator;
  * @version 0.1
  */
 
+
 public class Calculator {
 	private double result;
 	
