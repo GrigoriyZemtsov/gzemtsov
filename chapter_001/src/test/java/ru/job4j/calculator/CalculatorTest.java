@@ -1,48 +1,56 @@
 package ru.job4j.calculator;
 
+/*
+ * Class Calculatorest тест программы вычисления простых арифметических операций
+ * @autor gzemtsov
+ * @since 08.03.2018
+ * @version 0.1
+ */
+
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class CalculatorTest {
+	
+	// Тест проверки операции сложения
 	@Test
-	// тест операции сложения
 	public void whenAddOnePlusOneThenTwo() {
 		Calculator calc = new Calculator();
 		calc.add(1D, 1D);
-		double result = calc.getResultAdd();
+		double result = calc.getResult();
 		double expected = 2D;
 		assertThat(result, is(expected));
 	}
 
+	// Тест проверки операции вычитания
 	@Test
-	// тест операции вычитание
 	public void whenSubtractTwoMinusOneThenOne() {
 		Calculator calc = new Calculator();
 		calc.subtract(2D, 1D);
-		double result = calc.getResultSub();
+		double result = calc.getResult();
 		double expected = 1D;
 		assertThat(result, is(expected));
 	}
 
+	// Тест проверки операции деления
 	@Test
-	// тест операции деления
-	public void whenDivFourDivTwoThenTwo() {
+	public void whenDivSixDivideThreeThenTwo() {
 		Calculator calc = new Calculator();
-		calc.div(4D, 2D);
-		double result = calc.getResultDiv();
+		calc.div(6D, 3D);
+		double result = calc.getResult();
 		double expected = 2D;
 		assertThat(result, is(expected));
 	}
 
+	// Тест проверки операции умножения
 	@Test
-	// тест операции умножения
-	public void whenMultiplyThreeMultiplyTwoThenSix() {
+	public void whenMultipleTwoMultipleTwoThenFour() {
 		Calculator calc = new Calculator();
-		calc.multiply(3D, 2D);
-		double result = calc.getResultMult();
-		double expected = 6D;
+		calc.multiple(2D, 2D);
+		double result = calc.getResult();
+		double expected = 4D;
 		assertThat(result, is(expected));
 	}
 }
