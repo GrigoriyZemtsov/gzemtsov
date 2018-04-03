@@ -6,7 +6,7 @@ package ru.job4j.calculator;
 
 public class Fit {
 
-    private static final double constantK = 1.15, constantA = 100, constantB = 110;
+    private static final double constK = 1.15, constA = 100, constB = 110;
 
     /**
      * Идеальный вес мужчины
@@ -14,7 +14,7 @@ public class Fit {
      * @return идеальный вес.
      */
     public double manWeight(double height) {
-        return (height - constantA) * constantK;
+        return (height - constA) * constK;
     }
 
     /**
@@ -23,6 +23,6 @@ public class Fit {
      * @return идеальный вес
      */
     public double womanWeight(double height) {
-        return (height - constantB) * constantK;
+        return (height - constB) * constK;
     }
 }
