@@ -6,7 +6,7 @@ package ru.job4j.calculator;
 
 public class Fit {
     double idealMan, idealWoman;
-    final double MAN_WEIGHT = 100, WOMAN_WEIGHT = 110, COEF = 1.15;
+    final double manWEIGHT = 100, womanWEIGHT = 110, coef = 1.15;
 
     /**
      * Идеальный вес мужчины
@@ -14,7 +14,7 @@ public class Fit {
      * @return идеальный вес.
      */
     public double manWeight(double height) {
-        idealMan = (height - MAN_WEIGHT) * COEF;
+        idealMan = (height - manWEIGHT) * coef;
         return idealMan;
     }
 
@@ -24,7 +24,7 @@ public class Fit {
      * @return идеальный вес
      */
     public double womanWeight(double height) {
-        idealWoman = (height - WOMAN_WEIGHT) * COEF;
+        idealWoman = (height - womanWEIGHT) * coef;
         return idealWoman;
     }
 }
