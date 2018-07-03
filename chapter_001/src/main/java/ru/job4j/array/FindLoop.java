@@ -13,8 +13,6 @@ package ru.job4j.array;
 			 if (data[index] == el) {
 				 rst = index;
 				 break;
-			 } else {
-			 	rst = -1;
 			 }
 		 }
 		 return rst;
