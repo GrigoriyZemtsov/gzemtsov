@@ -12,6 +12,7 @@ public class Check {
 		for (boolean b : data) {
             if (b != data[0]) {
 				result = false;
+				break;
 			}
         }
 		return result;
