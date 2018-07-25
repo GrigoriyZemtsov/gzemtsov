@@ -15,19 +15,21 @@ package ru.job4j.array;
 	 /**
 	  * Метод проверки префикса с которого начинаются слова
 	  * @param prefix - префикс.
-	  * @return, если слово начинается с префикса.
+	  * @return boolean.
 	  */
 	  public boolean startWith(String prefix) {
-		  boolean result = true;
+		  boolean result = false;
 		  char[] value = prefix.toCharArray();
-		  // осуществляем проверку, пока не достигнем конца наиболее короткой строки.
 		  int minLength = Math.min(value.length, data.length);
-		  // проверить массив data на одинаковость элементов с value.
-		  for (int i = 0; i < minLength; i++) {				
-				if (value[i] != data[i]) {
-					result = false;
-					break;
-				}				
+		  if (value.length < data.length) {
+			  for (int i = 0; i < minLength; i++) {
+				  if (value[i] != data[i]) {
+					  result = false;
+					  break;
+				  } else {
+				  	result = true;
+				  }
+			  }
 		  }
 		  return result;
 	  }

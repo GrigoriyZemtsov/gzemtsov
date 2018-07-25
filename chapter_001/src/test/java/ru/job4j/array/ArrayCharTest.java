@@ -24,4 +24,11 @@ package ru.job4j.array;
 		 boolean result = word.startWith("Hi");
 		 assertThat(result, is(false));
 	 }
+
+	 @Test
+	 public void whenStartWithLenghtPrefixThenFalse() {
+		 ArrayChar word = new ArrayChar("Good");
+		 boolean result = word.startWith("Goodbay");
+		 assertThat(result, is(false));
+	 }
  }
