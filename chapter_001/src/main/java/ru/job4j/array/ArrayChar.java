@@ -21,13 +21,11 @@ package ru.job4j.array;
 		  boolean result = false;
 		  char[] value = prefix.toCharArray();
 		  if (value.length < data.length) {
-			  int minLength = Math.min(value.length, data.length);
-			  for (int i = 0; i < minLength; i++) {
+			  result = true;
+			  for (int i = 0; i < value.length; i++) {
 				  if (value[i] != data[i]) {
 					  result = false;
 					  break;
-				  } else {
-				  	result = true;
 				  }
 			  }
 		  }
