@@ -15,7 +15,7 @@ package ru.job4j.array;
 					array[j] = array[j + 1];
 					array[j + 1] = tmp;
 				}
-			 }			 
+			 }
 		 }
 		 return array;
 	 }
