@@ -13,6 +13,7 @@ public class MatrixCheck {
 			for (int j = 0; j < data[i].length - 1; j++) {
 			    if ((data[i][j] != data[i + 1][j + 1]) || (data[0][data.length - 1] != data[i][data.length - 1 - i])) {
 					result = false;
+					break;
 				}
 			}
 		}
