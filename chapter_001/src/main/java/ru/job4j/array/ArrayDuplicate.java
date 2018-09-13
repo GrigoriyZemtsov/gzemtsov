@@ -10,14 +10,10 @@ package ru.job4j.array;
  
  public class ArrayDuplicate {
 	 public String[] remove(String[] array) {
-		 int dup = 0;
+	     int dup = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length - dup; j++) {
-                if (array[i].equals(array[j])) {
-                    while (j != array.length - dup - 1
-                        && array[array.length - dup - 1].equals(array[j])) {
-                        dup++;
-                    }
+                if (j != array.length - dup && array[i].equals(array[j])) {
                     String tmp = array[array.length - dup - 1];
                     array[array.length - dup - 1] = array[j];
                     array[j] = tmp;
@@ -25,6 +21,6 @@ package ru.job4j.array;
                 }
             }
         }
-    return Arrays.copyOf(array, array.length - dup);
-	 }
+         return Arrays.copyOf(array, array.length - dup);
+     }
  }
