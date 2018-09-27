@@ -30,4 +30,14 @@ package ru.job4j.array;
 		 String[] expect = {"Привет", "Мир", "Ура", "Супер", "Пока"};
 		 assertThat(resultArray, is(expect));
 	 }
+
+	 @Test
+	 public void whenRemoveDuplicatesThenArrayWithoutDuplicate3() {
+		 String[] bound = {"Привет", "Привет", "Привет", "Привет"};
+		 ArrayDuplicate duplicate = new ArrayDuplicate();
+		 String[] resultArray;
+		 resultArray = duplicate.remove(bound);
+		 String[] expect = {"Привет"};
+		 assertThat(resultArray, is(expect));
+	 }
  }

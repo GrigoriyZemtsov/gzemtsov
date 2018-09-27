@@ -13,10 +13,11 @@ package ru.job4j.array;
 	     int dup = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length - dup; j++) {
-                if (j != array.length - dup && array[i].equals(array[j])) {
+                if (array[i].equals(array[j])) {
                     String tmp = array[array.length - dup - 1];
                     array[array.length - dup - 1] = array[j];
                     array[j] = tmp;
+                    j--;
                     dup++;
                 }
             }
