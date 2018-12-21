@@ -4,7 +4,7 @@ import ru.job4j.puzzle.firuges.Cell;
 import ru.job4j.puzzle.firuges.Figure;
 
 /**
- * //TO DO add comments.
+ * Программа определения выигрышной комбинации игры.
  *
  * @author Petr Arsentev (parsentev@yandex.ru)
  * @version $Id$
@@ -69,9 +69,12 @@ public class Logic {
     public boolean isWin() {
         int[][] table = this.convert();
         boolean result = false;
-        int ver = 0, hor = 0;
+        int ver = 0, hor = 0, count = 0;
         for (int i = 0; i < table.length; i++) {
             for (int j = 0; j < table.length; j++) {
+                if (table[i][j] != 0) {
+                    count++;
+                }
                 if (table[i][j] != 0 && table[i][j] == table[table.length - i - 1][j]) {
                     hor++;
                 } else if (table[i][j] != 0 && table[i][j] == table[i][table.length - j - 1]) {
@@ -79,7 +82,9 @@ public class Logic {
                 }
             }
         }
-        if (hor == size || ver == size) { result = true; }
+        if (count == size) {
+            if (hor == size || ver == size) { result = true; }
+        } else { result = false; }
         return result;
     }
 
