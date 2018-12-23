@@ -1,15 +1,12 @@
 package ru.job4j.array;
-
 /**
  * Тест проверки класса FindLoop.
  * @autor Grigory Zemtsov
  * @version 001
  */
- 
  import org.junit.Test;
  import static org.hamcrest.core.Is.is;
  import static org.junit.Assert.assertThat;
- 
  public class FindLoopTest {
 	 @Test
 	 public void whenArrayHasLengh5Then0() {
@@ -20,7 +17,6 @@ package ru.job4j.array;
 		 int expect = 0;
 		 assertThat(result, is(expect));
 	 }
-	 
 	 @Test
 	 public void whenArrayHasLengh7ThenError() {
 		 FindLoop find = new FindLoop();

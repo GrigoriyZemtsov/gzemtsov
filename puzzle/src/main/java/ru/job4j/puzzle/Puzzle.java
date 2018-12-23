@@ -1,5 +1,4 @@
 package ru.job4j.puzzle;
-
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
@@ -24,7 +23,6 @@ public class Puzzle extends Application {
     private static final String JOB4J = "Пазлы на www.job4j.ru";
     private final int size = 5;
     private final Logic logic = new Logic(size);
-
     private Rectangle buildRectangle(int x, int y, int size) {
         Rectangle rect = new Rectangle();
         rect.setX(x * size);
@@ -35,7 +33,6 @@ public class Puzzle extends Application {
         rect.setStroke(Color.BLACK);
         return rect;
     }
-
     private Rectangle buildFigure(int x, int y, int size, String image) {
         Rectangle rect = new Rectangle();
         rect.setX(x);
@@ -71,7 +68,6 @@ public class Puzzle extends Application {
         );
         return rect;
     }
-
     private void checkWinner() {
         if (this.logic.isWin()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -81,7 +77,6 @@ public class Puzzle extends Application {
             alert.showAndWait();
         }
     }
-
     private Group buildGrid() {
         Group panel = new Group();
         for (int y = 0; y != this.size; y++) {
@@ -93,7 +88,6 @@ public class Puzzle extends Application {
         }
         return panel;
     }
-
     @Override
     public void start(Stage stage) {
         BorderPane border = new BorderPane();
@@ -114,7 +108,6 @@ public class Puzzle extends Application {
         stage.show();
         this.refresh(border);
     }
-
     private void refresh(final BorderPane border) {
         Group grid = this.buildGrid();
         this.logic.clean();
@@ -122,7 +115,6 @@ public class Puzzle extends Application {
         this.generate(true, 6, grid);
         this.generate(false, 5, grid);
     }
-
     public void generate(boolean block, int total,  Group grid) {
         int count = total;
         final Random random = new Random();
@@ -138,7 +130,6 @@ public class Puzzle extends Application {
             }
         }
     }
-
     public void add(Figure figure, Group grid) {
         this.logic.add(figure);
         Cell position = figure.position();
@@ -151,7 +142,6 @@ public class Puzzle extends Application {
                 )
         );
     }
-
     private Cell extract(double graphX, double graphY) {
         return new Cell((int) graphX / 40, (int) graphY / 40);
     }

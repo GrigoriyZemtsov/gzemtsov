@@ -1,10 +1,13 @@
 package ru.job4j.puzzle;
-
+/**
+ * Проверка класса Logic
+ * @autor Gregory Zemtsov
+ * @version $Id$
+ */
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
-
 public class LogicTest {
     @Test
     public void whenVerticalWin() {
@@ -22,7 +25,6 @@ public class LogicTest {
         };
         assertThat(logic.isWin(), is(true));
     }
-
     @Test
     public void whenHorizontalWin() {
         Logic logic = new Logic(5) {
@@ -39,7 +41,6 @@ public class LogicTest {
         };
         assertThat(logic.isWin(), is(true));
     }
-
     @Test
     public void whenNotWin() {
         Logic logic = new Logic(5) {
@@ -56,7 +57,6 @@ public class LogicTest {
         };
         assertThat(logic.isWin(), is(false));
     }
-
     @Test
     public void whenVerticalNotWin() {
         Logic logic = new Logic(5) {
@@ -73,7 +73,6 @@ public class LogicTest {
         };
         assertThat(logic.isWin(), is(false));
     }
-
     @Test
     public void whenHorizontalNotWin() {
         Logic logic = new Logic(5) {
@@ -90,7 +89,6 @@ public class LogicTest {
         };
         assertThat(logic.isWin(), is(false));
     }
-
     @Test
     public void whenVerticalNotAllWin() {
         Logic logic = new Logic(5) {
@@ -107,7 +105,6 @@ public class LogicTest {
         };
         assertThat(logic.isWin(), is(false));
     }
-
     @Test
     public void whenHorizontalNotAllWin() {
         Logic logic = new Logic(5) {
@@ -124,7 +121,6 @@ public class LogicTest {
         };
         assertThat(logic.isWin(), is(false));
     }
-
     @Test
     public void whenNotWin2() {
         Logic logic = new Logic(5) {

@@ -1,15 +1,12 @@
 package ru.job4j.array;
-
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-
 /**
  * Тест класса BubbleSort.
  * @autor Gregory Zemtsov
  * @version 001 25.07.2018
  */
- 
  public class BubbleSortTest {
 	 @Test
 	 public void whenArraySortFive() {
@@ -19,7 +16,6 @@ import static org.junit.Assert.assertThat;
 		 int[] expect = new int[] {1, 3, 5, 7, 10};
 		 assertThat(result, is(expect));
 	 }
-
 	@Test
 	public void whenArraySortTen() {
 		BubbleSort bubble = new BubbleSort();

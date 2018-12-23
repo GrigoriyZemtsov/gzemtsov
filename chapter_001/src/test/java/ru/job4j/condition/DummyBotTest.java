@@ -1,11 +1,10 @@
 package ru.job4j.condition;
-
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-
 /**
- * @autor gzemtsov
+ * Проверка класса DummyBot
+ * @autor Gregory Zemtsov
  * @version $Id$
  * @since 0.1
  */
@@ -15,13 +14,11 @@ import static org.junit.Assert.assertThat;
 		 DummyBot bot = new DummyBot();
 		 assertThat(bot.answer("Привет, бот."), is("Привет, умник."));
 	 }
-	 
 	 @Test
 	 public void whenBuyBot() {
 		 DummyBot bot = new DummyBot();
 		 assertThat(bot.answer("Пока."), is("До скорой встречи."));
 	 }
-	 
 	 @Test
 	 public void whenUnknownBot() {
 		 DummyBot bot = new DummyBot();

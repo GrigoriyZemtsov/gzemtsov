@@ -1,15 +1,12 @@
 package ru.job4j.array;
-
 /**
  * Тест класса Matrix.
  * @autor Gregory Zemtsov
  * @version 001 30.07.2018
  */
- 
  import org.junit.Test;
  import static org.hamcrest.core.Is.is;
  import static org.junit.Assert.assertThat;
- 
  public class MatrixTest {
 	 @Test
 	 public void when2On2() {
@@ -20,7 +17,6 @@ package ru.job4j.array;
 		 };
 		 assertThat(table, is(expect));
 	 }
-	 
 	 @Test
 	 public void when3On3() {
 		 Matrix matrix = new Matrix();
@@ -30,7 +26,6 @@ package ru.job4j.array;
 		 };
 		 assertThat(table, is(expect));
 	 }
-
 	 @Test
 	 public void when4On4() {
 		 Matrix matrix = new Matrix();

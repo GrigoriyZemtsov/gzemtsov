@@ -1,11 +1,9 @@
 package ru.job4j.array;
-
 /**
  * Программа сортировки массива методом "пузырька"
  * @autor Gregory Zemtsov
  * @version 001 16.07.2018
  */
- 
  public class BubbleSort {	 
 	 public int[] sort(int[] array) {
 		 for (int i = array.length - 1; i > 0; i--) {

@@ -1,15 +1,12 @@
 package ru.job4j.array;
-
 /**
  * Тест проверки класса Turn.
  * @autor Gregory Zemtsov
  * @version 001 03.07.2018
  */
- 
  import org.junit.Test;
  import static org.hamcrest.Matchers.is;
  import static org.junit.Assert.assertThat;
- 
  public class TurnTest {
 	 @Test
 	 public void whenTurnArrayWithEvenAmountOfElementsThenTurnedArray() {
@@ -19,7 +16,6 @@ package ru.job4j.array;
 		 int[] expect = new int[] {6, 4, 2, 1};
 		 assertThat(result, is(expect));
 	 }
-	 
 	 @Test
 	 public void whenTurnArrayWithOddAmountOfElementsThenTurnedArray() {
 		 Turn turned = new Turn();

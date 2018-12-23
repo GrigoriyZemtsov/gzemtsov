@@ -1,15 +1,12 @@
 package ru.job4j.array;
-
 /**
  * Тест класса MergeTwoArray
  * @autor Grigory Zemtsov (zemcov.rash@gmail.com)
  * @version 001 12.11.2018
  */
- 
  import org.junit.Test;
  import static org.hamcrest.core.Is.is;
  import static org.junit.Assert.assertThat;
- 
  public class MergeTwoArrayTest {
 	 @Test
 	 public void whenTwoArraySortFive() {

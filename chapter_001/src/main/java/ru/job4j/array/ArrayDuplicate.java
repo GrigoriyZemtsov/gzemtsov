@@ -1,13 +1,10 @@
 package ru.job4j.array;
-
 /**
  * Программа удаления дубликатов в строковом массиве
  * @autor Gregory Zemtsov (zemcov.rash@gmail.com).
  * @version 001 03.09.2018
  */
-
  import java.util.Arrays;
- 
  public class ArrayDuplicate {
 	 public String[] remove(String[] array) {
 	     int dup = 0;
@@ -19,6 +16,7 @@ package ru.job4j.array;
                     array[j] = tmp;
                     j--;
                     dup++;
+                    j--;
                 }
             }
         }

@@ -1,10 +1,9 @@
 package ru.job4j.max;
-
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-
 /**
+ * Проверка класса Max
  * @autor gzemtsov
  * version $Id$
  * @since 0.1

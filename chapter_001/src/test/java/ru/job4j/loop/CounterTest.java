@@ -1,10 +1,13 @@
 package ru.job4j.loop;
-
+/**
+ * Проверка класса Counter
+ * @autor Gregory Zemtsov
+ * @version $Id$
+ */
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-
 public class CounterTest {
 	@Test
 	public void whenSumEvenNumbersFromOneTenThenThirty() {

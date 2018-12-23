@@ -1,7 +1,6 @@
 package ru.job4j.condition;
-
 /**
- * программа расчета растояния между точками
+ * Программа расчета растояния между точками
  * @autor gzemtsov
  * @since 28.03.2018
  * @version 0.01
@@ -15,13 +14,10 @@ public class Point {
 		this.x = x;
 		this.y = y;
 	}
-
 	public double distanceTo(Point that) {
 		/**
-		 * Это текущая точка, обращение к точке a через this
-		 * Point a = this;
-		 * Это входящая точка, к b обращаемся через that
-		 * Point b = that;
+		 * Это текущая точка, обращение к точке a через this (Point a = this;)
+		 * Это входящая точка, к b обращаемся через that (Point b = that;)
 		 * this.x - значение х точки а
 		 * this.y - значение y точки а
 		 * that.x - значение х точки b

@@ -1,14 +1,11 @@
 package ru.job4j.array;
-
 /**
  * Программа проверяющая, что слова начинаются в определенной последовательности.
  * @autor Gregory Zemtsov
  * @version 001 10.07.2018
  */
- 
  public class ArrayChar {
 	 private char[] data;
-	 
 	 public ArrayChar(String line) {
 		 this.data = line.toCharArray();
 	 }
